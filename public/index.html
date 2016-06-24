@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>FCC - Timestamp Microservice</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+		
+	</head>
+
+	<body>
+		<div class="container">
+				<div class= 'row'>
+					<h1>Timestamp microservice</h1>
+				</div>
+				<div class='row'>
+					<h3>User stories:</h3>
+					<blockquote>
+						<p class='text-left'>1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date</p> 
+						<p class='text-left'>(example: January 1, 2016)</p>
+						<p class='text-left'>2) If it does, it returns both the Unix timestamp and the natural language form of that date.</p>
+						<p class='text-left'>3) If it does not contain a date or Unix timestamp, it returns null for those properties.</p>
+					</blockquote>
+					<div class='col-sm-4'>
+						<h4>Example 1:</h4>
+						<p><b>Url: </b><code>https://rtapan-timestamp-ms.herokuapp.com/1450137600</code></p>
+						<p><b>Output: </b><code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code></p>
+					</div>
+					<div class='col-sm-4'>
+						<h4>Example 2:</h4>
+						<p><b>Url: </b><code>https://rtapan-timestamp-ms.herokuapp.com/December%2015,%202015</code><br></p>
+						<p><b>Output: </b><code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code></p>
+					</div>
+					<div class='col-sm-4'>
+						<h4>Example 3:</h4>
+						<p><b>Url: </b><code>https://rtapan-timestamp-ms.herokuapp.com/not_a_date</code><br></p>
+						<p><b>Output: </b><code>{ "unix": null, "natural": null }</code></p>
+					</div>
+
+				</div>
+		</div>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-sm-3'>
+					<a href="http://www.freecodecamp.com/reginaldt" target="_blank" class="btn btn-block btn-info btn-lg" role = "button"><i class="fa fa-fire"></i> FreeCodeCamp</a>
+				</div>
+				<div class='col-sm-3'>
+					<a href="https://github.com/reginaldt" target="_blank" class="btn btn-block btn-info btn-lg" role = "button"><i class="fa fa-github"></i> Github</a>
+				</div>
+				<div class='col-sm-3'>
+					<a href="https://www.facebook.com/reginaldtapan" target="_blank" class="btn btn-block btn-info btn-lg shake" role = "button"><i class="fa fa-facebook-square"></i> Facebook</a>
+				</div>
+				<div class='col-sm-3'>
+					<a href="#" class="btn btn-block btn-info btn-lg shake" role = "button"><i class="fa fa-envelope"></i> reggie.mt@gmail.com</a>
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+
+</html>
